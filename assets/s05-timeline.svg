@@ -1,64 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
-
 <defs>
   <style>
     .m{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
     .s{font-family:Arial,"Helvetica Neue",sans-serif}
     .tiny{font-size:10px;letter-spacing:2.4px}
     .small{font-size:12px;letter-spacing:.5px}
-    .body{font-size:14px}
-    .title{font-size:25px;font-weight:600}
     .ink{fill:#111}
     .muted{fill:#666}
-    .rule{stroke:#111;stroke-width:1}
     .soft{stroke:#aaa;stroke-width:1}
-    .dash{stroke:#777;stroke-width:1;stroke-dasharray:3 5;fill:none}
-    .packet{fill:#111}
-    .node{fill:#fff;stroke:#111;stroke-width:1}
-    @keyframes blink{0%,45%{opacity:1}50%,95%{opacity:.15}100%{opacity:1}}
+    .rule{stroke:#111;stroke-width:1}
     @keyframes dash{to{stroke-dashoffset:-80}}
-    @keyframes pulse{0%,100%{r:2;opacity:.35}50%{r:4;opacity:1}}
-    @keyframes rise{0%{transform:translateY(12px);opacity:.1}50%{opacity:1}100%{transform:translateY(-12px);opacity:.1}}
-    .blink{animation:blink 1.7s steps(1,end) infinite}
     .moving{animation:dash 3.5s linear infinite}
-    .pulse{animation:pulse 1.8s ease-in-out infinite}
   </style>
-  <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .025 0"/></filter>
 </defs>
+
 <rect width="100%" height="100%" fill="#fff"/>
-<rect width="100%" height="100%" filter="url(#paper)" opacity=".22"/>
 
-
-<text x="24" y="34" class="m tiny ink">05   THE ROUTE</text>
+<text x="24" y="34" class="m tiny ink">05&#160;&#160; THE ROUTE</text>
 <line x1="145" y1="28" x2="930" y2="28" class="rule"/>
 <text x="965" y="33" class="m tiny muted">/05-TIMELINE</text>
 <text x="24" y="64" class="m tiny muted">DEVELOPMENT TIMELINE — THE PATH SO FAR</text>
 
-<path d="M90 180 C200 100 285 265 410 180 S610 95 735 180 S900 265 1020 165" fill="none" stroke="#111" stroke-width="1"/>
-<path d="M90 180 C200 100 285 265 410 180 S610 95 735 180 S900 265 1020 165" fill="none" stroke="#777" stroke-width="1" stroke-dasharray="3 6" class="moving"/>
+<!--
+  The route deliberately travels through the empty space between labels.
+  It remains one continuous flowing curve, like the original version,
+  but the 2026 Hack Canada label sits above the curve instead of on it.
+-->
+<path d="M58 176
+         C145 112 205 130 278 174
+         C355 220 402 168 465 122
+         C535 72 610 78 676 125
+         C735 167 760 210 826 226
+         C890 242 944 205 1015 142"
+      fill="none" stroke="#111" stroke-width="1.2"/>
 
-<circle cx="90" cy="180" r="5" fill="#fff" stroke="#111"/>
-<circle cx="300" cy="190" r="5" fill="#fff" stroke="#111"/>
-<circle cx="515" cy="140" r="5" fill="#fff" stroke="#111"/>
-<circle cx="735" cy="180" r="5" fill="#fff" stroke="#111"/>
-<circle cx="1020" cy="165" r="5" fill="#111"/>
-<circle r="3" class="packet"><animateMotion dur="5s" repeatCount="indefinite" path="M90,180 C200,100 285,265 410,180 S610,95 735,180 S900,265 1020,165"/></circle>
+<!-- subtle animated duplicate -->
+<path d="M58 176
+         C145 112 205 130 278 174
+         C355 220 402 168 465 122
+         C535 72 610 78 676 125
+         C735 167 760 210 826 226
+         C890 242 944 205 1015 142"
+      fill="none" stroke="#777" stroke-width="1"
+      stroke-dasharray="3 6" class="moving"/>
 
+<!-- moving packet -->
+<circle r="3" fill="#111">
+  <animateMotion dur="5s" repeatCount="indefinite"
+    path="M58,176 C145,112 205,130 278,174 C355,220 402,168 465,122 C535,72 610,78 676,125 C735,167 760,210 826,226 C890,242 944,205 1015,142"/>
+</circle>
+
+<!-- route markers -->
+<circle cx="58" cy="176" r="5" fill="#fff" stroke="#111"/>
+<circle cx="278" cy="174" r="5" fill="#fff" stroke="#111"/>
+<circle cx="465" cy="122" r="5" fill="#fff" stroke="#111"/>
+<circle cx="826" cy="226" r="5" fill="#fff" stroke="#111"/>
+<circle cx="1015" cy="142" r="5" fill="#111"/>
+
+<!-- Labels deliberately placed in the open areas around the curve -->
 <g class="m small">
-<text x="70" y="225" class="ink">2025</text><text x="70" y="245" class="muted">SpurHacks</text><text x="70" y="263" class="muted">Vroomi · Venture Track</text>
-<text x="250" y="110" class="ink">2025</text><text x="250" y="130" class="muted">Hack the Valley</text><text x="250" y="148" class="muted">Mimicoo · JWT Award</text>
-<text x="475" y="100" class="ink">2026</text><text x="475" y="120" class="muted">Hack Canada</text><text x="475" y="138" class="muted">Clarus · 2 awards</text>
-<text x="700" y="225" class="ink">2026</text><text x="700" y="245" class="muted">ICM</text><text x="700" y="263" class="muted">Computer Systems Analyst</text>
-<text x="960" y="215" class="ink">NOW</text><text x="960" y="235" class="muted">C++ / compilers</text><text x="960" y="253" class="muted">RISC-V / robotics</text>
+  <!-- 2025 / SpurHacks -->
+  <text x="38" y="232" class="ink">2025</text>
+  <text x="38" y="252" class="muted">SpurHacks</text>
+  <text x="38" y="270" class="muted">Vroomi · Venture Track</text>
+
+  <!-- 2025 / Hack the Valley -->
+  <text x="225" y="82" class="ink">2025</text>
+  <text x="225" y="102" class="muted">Hack the Valley</text>
+  <text x="225" y="120" class="muted">Mimicoo · JWT Award</text>
+
+  <!-- 2026 / Hack Canada -->
+  <text x="420" y="66" class="ink">2026</text>
+  <text x="420" y="86" class="muted">Hack Canada</text>
+  <text x="420" y="104" class="muted">Clarus · 2 awards</text>
+
+  <!-- 2026 / ICM -->
+  <text x="790" y="278" class="ink">2026</text>
+  <text x="790" y="298" class="muted">ICM</text>
+  <text x="790" y="316" class="muted">Computer Systems Analyst</text>
+
+  <!-- NOW -->
+  <text x="945" y="198" class="ink">NOW</text>
+  <text x="945" y="218" class="muted">C++ / compilers</text>
+  <text x="945" y="236" class="muted">RISC-V / robotics</text>
 </g>
 
-<line x1="24" y1="310" x2="1076" y2="310" class="soft"/>
-<text x="24" y="340" class="m tiny muted">ROUTE</text>
-<text x="95" y="340" class="m small ink">BUILD</text><text x="165" y="340" class="m small muted">→</text>
-<text x="205" y="340" class="m small ink">SHIP</text><text x="270" y="340" class="m small muted">→</text>
-<text x="310" y="340" class="m small ink">LEARN</text><text x="385" y="340" class="m small muted">→</text>
-<text x="425" y="340" class="m small ink">GO LOWER</text><text x="520" y="340" class="m small muted">→</text>
-<text x="560" y="340" class="m small ink">BUILD AGAIN</text>
-<text x="24" y="385" class="m tiny muted">NO STRAIGHT LINE — JUST FORWARD MOTION</text>
+<line x1="24" y1="352" x2="1076" y2="352" class="soft"/>
+<text x="24" y="382" class="m tiny muted">ROUTE</text>
+<text x="95" y="382" class="m small ink">BUILD</text>
+<text x="165" y="382" class="m small muted">→</text>
+<text x="205" y="382" class="m small ink">SHIP</text>
+<text x="270" y="382" class="m small muted">→</text>
+<text x="310" y="382" class="m small ink">LEARN</text>
+<text x="385" y="382" class="m small muted">→</text>
+<text x="425" y="382" class="m small ink">GO LOWER</text>
+<text x="520" y="382" class="m small muted">→</text>
+<text x="560" y="382" class="m small ink">BUILD AGAIN</text>
 
+<text x="24" y="407" class="m tiny muted">NO STRAIGHT LINE — JUST FORWARD MOTION</text>
 </svg>

@@ -5,6 +5,9 @@
 <p>
 <a href="https://github.com/Rahbir1518"><img src="https://img.shields.io/badge/GITHUB-111111?style=flat-square&logo=github&logoColor=white"></a>
 <a href="https://www.linkedin.com/in/rahbirmahdi/"><img src="https://img.shields.io/badge/LINKEDIN-111111?style=flat-square&logo=linkedin&logoColor=white"></a>
+<a href="https://devpost.com/Rahbir1518">
+  <img src="https://img.shields.io/badge/DEVPOST-111111?style=flat-square&logo=devpost&logoColor=white">
+</a>
 <a href="mailto:rahbir1518@gmail.com"><img src="https://img.shields.io/badge/EMAIL-111111?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 

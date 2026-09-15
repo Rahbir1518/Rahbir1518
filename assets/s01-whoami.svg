@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="410" viewBox="0 0 1100 410">
+
+<defs>
+  <style>
+    .m{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    .s{font-family:Arial,"Helvetica Neue",sans-serif}
+    .tiny{font-size:10px;letter-spacing:2.4px}
+    .small{font-size:12px;letter-spacing:.5px}
+    .body{font-size:14px}
+    .title{font-size:25px;font-weight:600}
+    .ink{fill:#111}
+    .muted{fill:#666}
+    .rule{stroke:#111;stroke-width:1}
+    .soft{stroke:#aaa;stroke-width:1}
+    .dash{stroke:#777;stroke-width:1;stroke-dasharray:3 5;fill:none}
+    .packet{fill:#111}
+    .node{fill:#fff;stroke:#111;stroke-width:1}
+    @keyframes blink{0%,45%{opacity:1}50%,95%{opacity:.15}100%{opacity:1}}
+    @keyframes dash{to{stroke-dashoffset:-80}}
+    @keyframes pulse{0%,100%{r:2;opacity:.35}50%{r:4;opacity:1}}
+    @keyframes rise{0%{transform:translateY(12px);opacity:.1}50%{opacity:1}100%{transform:translateY(-12px);opacity:.1}}
+    .blink{animation:blink 1.7s steps(1,end) infinite}
+    .moving{animation:dash 3.5s linear infinite}
+    .pulse{animation:pulse 1.8s ease-in-out infinite}
+  </style>
+  <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .025 0"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<rect width="100%" height="100%" filter="url(#paper)" opacity=".22"/>
+
+
+<text x="24" y="34" class="m tiny ink">01   WHOAMI</text>
+<line x1="145" y1="28" x2="930" y2="28" class="rule"/>
+<text x="965" y="33" class="m tiny muted">/01-RAHBIR</text>
+
+<text x="24" y="92" class="s" font-size="38" font-weight="500">Md Rahbir Mahdi</text>
+<text x="24" y="122" class="m small muted">software engineer · builder · hackathon enthusiast</text>
+<text x="24" y="148" class="m small muted">York University · Toronto, Canada · Computer Systems Analyst @ ICM</text>
+
+<line x1="24" y1="180" x2="1076" y2="180" class="soft"/>
+<text x="24" y="208" class="m tiny muted">FOCUS</text>
+<text x="115" y="208" class="m small ink">AI / SYSTEMS / FULL-STACK / MOBILE / C++</text>
+<text x="24" y="236" class="m tiny muted">STATUS</text>
+<text x="115" y="236" class="m small ink">building products · learning lower-level systems · open to SWE opportunities</text>
+<text x="24" y="264" class="m tiny muted">STYLE</text>
+<text x="115" y="264" class="m small ink">prototype quickly · debug deeply · finish the thing</text>
+
+<line x1="24" y1="302" x2="1076" y2="302" class="rule"/>
+<text x="24" y="330" class="m tiny muted">SIGNALS</text>
+<text x="24" y="362" class="m small ink">HACK CANADA 2026</text>
+<text x="24" y="384" class="m small muted">Google — Build with AI · Vivirion Solutions — Best Practical Healthcare Hack</text>
+<text x="620" y="362" class="m small ink">CURRENT DIRECTION</text>
+<text x="620" y="384" class="m small muted">C++ → compilers → RISC-V → robotics</text>
+<circle cx="1060" cy="385" r="3" class="ink blink"/>
+
+</svg>

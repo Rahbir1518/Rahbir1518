@@ -29,9 +29,9 @@
 <rect width="100%" height="100%" filter="url(#paper)" opacity=".22"/>
 
 
-<text x="24" y="34" class="m tiny ink">06   STACK</text>
+<text x="24" y="34" class="m tiny ink">05   STACK</text>
 <line x1="125" y1="28" x2="930" y2="28" class="rule"/>
-<text x="965" y="33" class="m tiny muted">/06-TOOLING</text>
+<text x="965" y="33" class="m tiny muted">/05-STACK</text>
 <text x="24" y="64" class="m tiny muted">TECHNICAL STACK — WHAT I USE TO TURN IDEAS INTO PRODUCTS</text>
 
 <g class="m small">

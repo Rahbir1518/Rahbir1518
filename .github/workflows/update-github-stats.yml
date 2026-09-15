@@ -33,7 +33,8 @@ jobs:
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: Rahbir1518
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_STATS_TOKEN }}
+          
           games: "galaga"
           hide_month_labels: "false"
 

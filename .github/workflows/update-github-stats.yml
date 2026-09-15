@@ -1,9 +1,13 @@
-name: Update GitHub stats SVG
+name: Update GitHub Stats and Galaga
 
 on:
   push:
+    branches:
+      - main
+
   schedule:
     - cron: "17 3 * * *"
+
   workflow_dispatch:
 
 permissions:
@@ -12,25 +16,45 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout profile
+      - name: Checkout profile repository
         uses: actions/checkout@v4
 
-      - name: Generate live stats SVG
+      - name: Generate live GitHub stats SVG
         env:
           GITHUB_USERNAME: Rahbir1518
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
-        run: python scripts/update_github_stats.py
+        run: |
+          python scripts/update_github_stats.py
 
-      - name: Commit updated SVG
+      - name: Generate Galaga contribution graph
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: Rahbir1518
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          games: "galaga"
+          hide_month_labels: "false"
+
+      - name: Publish Galaga SVGs
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated GitHub stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add assets/06-github-stats.svg
+
           if git diff --cached --quiet; then
-            echo "No stats changes."
-            exit 0
+            echo "No GitHub stats changes."
+          else
+            git commit -m "chore: update GitHub stats"
+            git push
           fi
-          git commit -m "chore: update GitHub stats"
-          git push

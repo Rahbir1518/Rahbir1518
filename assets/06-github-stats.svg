@@ -17,11 +17,11 @@
   <line x1="343" y1="0" x2="343" y2="135" class="soft"/>
   <line x1="686" y1="0" x2="686" y2="135" class="soft"/>
 
-  <text x="171" y="48" text-anchor="middle" class="m" font-size="34" font-weight="600" fill="#111">437</text>
+  <text x="171" y="48" text-anchor="middle" class="m" font-size="34" font-weight="600" fill="#111">438</text>
   <text x="171" y="78" text-anchor="middle" class="m small muted">TOTAL CONTRIBUTIONS</text>
   <text x="171" y="101" text-anchor="middle" class="m tiny muted">LAST 365 DAYS</text>
 
-  <text x="514" y="48" text-anchor="middle" class="m" font-size="34" font-weight="600" fill="#111">1</text>
+  <text x="514" y="48" text-anchor="middle" class="m" font-size="34" font-weight="600" fill="#111">2</text>
   <text x="514" y="78" text-anchor="middle" class="m small muted">CURRENT STREAK</text>
   <text x="514" y="101" text-anchor="middle" class="m tiny muted">CONSECUTIVE DAYS</text>
 
